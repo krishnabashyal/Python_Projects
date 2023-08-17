@@ -1,20 +1,22 @@
-print('Tell me what you wanna do today ')
-Num = int(input("enter the number of tasks you wanna do today: "))
-x,y = 0,1
-tasks=[] #list skipped on day 1 lol 
-
-#print("your tasks are: ")
-while (Num > x):
-    task1 = input('enter your first task: ')   
-    Num = Num-1
-    tasks.append(task1)
-     # print(y,". ", task1,)
-    # y=y+1
-    #think i need nested loop for the code in comments 
-print ("Your tasks for today are ", tasks) 
-
-#well got the output i wanted with this  proud proud lol
-while (y<=len(tasks)):
-    print(y,". ", tasks[x],)
-    y=y+1
-    x=x+1
+tasks=[]
+hello =''
+while True:
+    what_u_want = input('You wanna add more tasks or see or exit?: ') 
+    what_u_want == what_u_want.strip()
+    
+    match what_u_want:
+        case "add":
+            task= input("enter a task : ")
+            tasks.append(task)
+        case "show"| "gimme":
+            
+            for items in tasks:
+                items = items.title() # this capatilizes the first letter of word 
+                print(items)    
+        case "exit":
+            break
+        case _: # can use any word after case but its our language to use _ case "yoo" was also fine 
+            print("you entered an unknown command ")
+print ("good luck working. ")
+   
+  
