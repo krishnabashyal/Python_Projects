@@ -1,1 +1,3 @@
-eat
+sleep
+tweet
+type maybe
